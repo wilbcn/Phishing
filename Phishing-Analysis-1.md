@@ -15,3 +15,23 @@ You can find the setup of the secure VM in AWS here -> [EC2 VM](https://github.c
 - Document findings and create a final report
 
 ---
+
+
+## **1. Email overview **
+
+
+## **1. Template **
+
+## **1. Template **
+
+## **1. Template **
+
+## **1. Template **
+
+## **1. Template **
+
+## **1. Template **
+
+## **1. Template **
+
+
