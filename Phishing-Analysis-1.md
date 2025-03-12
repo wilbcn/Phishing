@@ -3,7 +3,7 @@
 ## 📖 Overview
 This document provides an overview of the steps taken to investigate a potential phishing email. In this scenario, I have received a real suspicious email, which inspired this project. I created this project to gain increased hands on experience and understanding of using a wide variety of tools for conducting phishing analysis, developing a better understanding of artifact collection, and phishing email diagnosis. Furthermore, to practice writing reports that a real security analyst might write up when investigating suspicious emails.
 
-💡 **This project was inspired by my learning in the** [**Blue Team Level 1**](https://www.securityblue.team/blue-team-level-1) **course, where i gained a solid introduction into email analysis and artifact collection.
+💡 **This project was inspired by my learning in the** [**Blue Team Level 1**](https://www.securityblue.team/blue-team-level-1) course**, where i gained a solid introduction into email analysis and artifact collection.
 
 You can find the setup of the secure VM in AWS here -> [EC2 VM](https://github.com/wilbcn/DigitalForensics/blob/main/AWS-SecureVM/README.md)
 
