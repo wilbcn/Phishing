@@ -16,28 +16,56 @@ You can find the setup of the secure VM in AWS here -> [EC2 VM](https://github.c
 
 ---
 
+## Tools used
+- Email header analyzer: https://mxtoolbox.com/EmailHeaders.aspx
+-
+-
 
-## 1. Email overview
-I moved the suspicious email onto my EC2 VM, and opened it using Mozilla Thunderbird.
 
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/d1ed86b4-cf4e-4924-a257-197eb1df641b" />
+
+## 1. Email overview.
+I moved the suspicious email onto my EC2 VM, and opened it using Mozilla Thunderbird. For security/privacy reasons, my email address has been hidden. 
+
+![image](https://github.com/user-attachments/assets/cfccbacc-fb3f-4f98-b81f-ede4dfbe4580)
+
 
 An initial analysis provides us with several red flags which indicate a potential phishing email.
 
-- I am not addressed personally. If this were a legimate email, usually my first name would appear in the initial greeting.
+- Lack of personalised greeting. A legitimate email would address me formally.
 - The apparent sender **mendesmend8pif@virgilio.it**. This is highly suspicious sender address.
 - The overall body content is not that of a professional service, such as an estate agent advertising an apartment.
 - No official company signature.
-  
-![image](https://github.com/user-attachments/assets/48b44e8a-240f-4bb3-9da4-07b65229cd1b)
+- The email itself is unsolicited.
+- The email asks for me to engage with it in order to find out more information. 
 
-- Using URL2PNG tool, we can see that this domain takes us to an Italian news webpage, which has nothing to do with the body contents of the email, which is advertising apartments in Barcelona.
-- Furthermore, the
+## 2. Collecting Artifacts.
+To gather the email artifacts to investigate further into this email, I used the email header analyzer tool from mxtoolbox. I opened the .eml in notepad++, and copied the header into the tool.
 
+✅ DMARC Compliant – The email passed DMARC authentication, meaning the sender’s domain has a DMARC policy in place.
+✅ SPF Alignment & SPF Authenticated – The email originated from an authorized mail server, as specified in the domain’s SPF records.
+✅ DKIM Alignment – The DKIM signature matches the expected sending domain, which typically confirms the email was not altered in transit.
+❌ DKIM Authentication failed suggesting that:
 
-## **1. Template **
+- The DKIM signature may have been forged.
+- The signature didn’t match the cryptographic key in DNS.
+- The email could have been modified after signing, indicating a possible spoofing attempt.
 
-## **1. Template **
+![image](https://github.com/user-attachments/assets/9332d6af-42f8-44b3-bf02-dbd1f9a60dce)
+
+The tool also provides us with a wide variety of valuable artifacts, under the headers section. 
+
+| **Header Field**       | **Value** |
+|------------------------|---------------------------------------------------|
+| **Delivered-To**       | *(Hidden Address)* |
+| **Return-Path**        | `<mendesmend8pif@virgilio.it>` |
+| **Date**              | Thu, 20 Feb 2025 21:39:09 +0100 (CET) |
+| **From**              | `mendesmend8pif@virgilio.it` |
+| **Subject**           | Lloguer en Carrer Gran de Gràcia - Metro Lesseps Barcelona BBZM18 |
+| **Received-SPF**      | `pass (google.com: domain of mendesmend8pif@virgilio.it designates 213.209.9.36 as permitted sender)` |
+| **Client IP**         | `213.209.9.36` |
+| **X-Originating-IP**  | `2.39.110.75` |
+
+## 3. Investigations.
 
 ## **1. Template **
 
