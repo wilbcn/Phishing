@@ -80,7 +80,30 @@ By converting the web page into a png image, we can gain insights into the web p
 
 Neither the Client IP address, or the Originating IP address, have been flagged using this tool. However, this does not necessarily mean that these addresses are harmless. These addresses may have been compromised.
 
-- Tool: 
+- Tool: Cisco Talos Intelligence
+- Originating IP: 2.39.110.75
+
+![image](https://github.com/user-attachments/assets/1fe3db21-b264-4294-a0ca-c16c48f4e9cd)
+
+Using this tool we have various key take-aways.
+- Location: As already discovered, the location of origin is Italy.
+- The Sender IP reputation is **Poor**.
+- The IP address has been listed on the **Spamhaus Blocklist**.
+- Legitimate mail servers typically have consistent email traffic, but this one shows zero activity.
+- Spam level critical, which further supports the phishing classification of this email.
+
+- Client IP: 213.209.9.36
+
+![image](https://github.com/user-attachments/assets/2c93b094-e743-42c8-9d82-95a968290ce5)
+
+Key take-aways.
+- The IP belongs to ItaliaOnline S.p.A, the parent company of virgilio.it, confirming it is an official email provider.
+- The Reverse DNS matches, meaning the IP is properly configured for sending emails.
+- Despite a **Good** sender reputation, Talos flags the spam level as **Critical**, which could indicate the server is sending a large amount of spam emails.
+- A legitimate email provider should have a much larger email volume. 3.8 emails per day is very low, and ultimately suspicious.
+
+
+
 ## **1. Template **
 
 ## **1. Template **
