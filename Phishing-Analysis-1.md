@@ -18,9 +18,9 @@ You can find the setup of the secure VM in AWS here -> [EC2 VM](https://github.c
 
 ## Tools used
 - Email header analyzer: https://mxtoolbox.com/EmailHeaders.aspx
--
--
-
+- URL2PNG: https://www.url2png.com/
+- AbuseIPDB: https://www.abuseipdb.com
+- Cisco Talos Intelligence: https://talosintelligence.com/reputation_center/l
 
 
 ## 1. Email overview.
@@ -66,7 +66,21 @@ The tool also provides us with a wide variety of valuable artifacts, under the h
 | **X-Originating-IP**  | `2.39.110.75` |
 
 ## 3. Investigations.
+- Tool: URL2PNG
 
+![image](https://github.com/user-attachments/assets/535eb3c0-7a40-44a5-a52c-ad8f9271373c)
+
+By converting the web page into a png image, we can gain insights into the web page without actually visiting it. Here we can see that virgilio.it is an italian news website, which is very strange for an agency or person claiming to be advertise an apartment in Barcelona. 
+
+- Tool: abuseipdb
+
+![image](https://github.com/user-attachments/assets/80d3440f-1afe-497d-9976-25f5f1b1d6cd)
+
+![image](https://github.com/user-attachments/assets/5888561d-0df7-4598-b166-812cfa4ee72f)
+
+Neither the Client IP address, or the Originating IP address, have been flagged using this tool. However, this does not necessarily mean that these addresses are harmless. These addresses may have been compromised.
+
+- Tool: 
 ## **1. Template **
 
 ## **1. Template **
