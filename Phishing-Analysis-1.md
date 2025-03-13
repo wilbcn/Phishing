@@ -16,7 +16,7 @@ You can find the setup of the secure VM in AWS here -> [EC2 VM](https://github.c
 
 ---
 
-## Tools used
+## 🛠️ Tools used
 - Email header analyzer: https://mxtoolbox.com/EmailHeaders.aspx
 - URL2PNG: https://www.url2png.com/
 - AbuseIPDB: https://www.abuseipdb.com
@@ -133,6 +133,10 @@ During our investigation, **AbuseIPDB** had 0 file reports for the identified ad
 In the above image, I have entered details from our investigation and submitted a report.
 
 ## 6. Future expansions
+To further enhance my skills in phishing email analysis, I plan to investigate a broader range of phishing scenarios. In future expansions of this project, I aim to analyze phishing emails containing various types of malicious content, such as:
 
+- Malicious attachments (e.g., documents with macros, executable payloads).
+- Obfuscated or shortened URLs.
+- Advanced social-engineering techniques designed to bypass detection.
 
-
+Additionally, I plan to explore how phishing analysis can be automated and integrated into existing threat intelligence platforms and SIEM configurations. As part of my ongoing journey into cybersecurity, I'm actively gaining hands-on experience with Splunk and developing automated workflows through Python scripting to streamline threat detection and response.
