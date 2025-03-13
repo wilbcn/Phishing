@@ -102,16 +102,21 @@ Key take-aways.
 - Despite a **Good** sender reputation, Talos flags the spam level as **Critical**, which could indicate the server is sending a large amount of spam emails.
 - A legitimate email provider should have a much larger email volume. 3.8 emails per day is very low, and ultimately suspicious.
 
+These findings  suggests that the email was sent through a real server, but potentially from a compromised account.
 
+## 3. Summary.
+In conclusion, I have classified due to the following:
+- The emails content is highly suspicious. There is no professional/business formatting, a lack of personalisation, and that this email was unsolicited.
+- Using various tools, we find out that the originating IP address has been flagged for **spam**, along with a low traffic volume which is unlikely for a legitimate source.
+- The sender domain **virgilio.it** is irrelevant to the context of the email, advertising apartments.
 
-## **1. Template **
+Classification: Spam!
 
-## **1. Template **
+This email is classified primarily as spam, whilst also potentially scouting for active mailboxes, aka mailbox probing. Users who interact or reply confirm to attackers that their mailbox is active, potentially exposing themselves to future, more sophisticated phishing campaigns.
 
-## **1. Template **
+## 4. Remediation.
 
-## **1. Template **
+## 5. Future expansions
 
-## **1. Template **
 
 
