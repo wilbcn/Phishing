@@ -36,7 +36,8 @@ An initial analysis provides us with several red flags which indicate a potentia
 - The overall body content is not that of a professional service, such as an estate agent advertising an apartment.
 - No official company signature.
 - The email itself is unsolicited.
-- The email asks for me to engage with it in order to find out more information. 
+- The email asks for me to engage with it in order to find out more information.
+- Email was received at 21:39 CET. This is definately outside of working business hours for a legitimate source.
 
 ## 2. Collecting Artifacts.
 To gather the email artifacts to investigate further into this email, I used the email header analyzer tool from mxtoolbox. I opened the .eml in notepad++, and copied the header into the tool.
@@ -112,11 +113,26 @@ In conclusion, I have classified due to the following:
 
 Classification: Spam!
 
-This email is classified primarily as spam, whilst also potentially scouting for active mailboxes, aka mailbox probing. Users who interact or reply confirm to attackers that their mailbox is active, potentially exposing themselves to future, more sophisticated phishing campaigns.
+This email is classified primarily as spam, whilst also potentially scouting for active mailboxes, aka mailbox probing. Users who interact or reply confirm to attackers that their mailbox is active, potentially exposing themselves to future, more sophisticated phishing campaigns. By engaging with this email, victims may provide the sender with sensitive information, thinking they are really enquiring about a real apartment advertisement, known as a credential harvester. 
 
-## 4. Remediation.
+## 4. Recommended actions.
 
-## 5. Future expansions
+| **Action** | **Explanation and Logic** |
+|------------|---------------------------|
+| **Block originating IP address (`2.39.110.75`) at email gateway or firewall.** | As this IP has a poor reputation and is listed on Spamhaus, blocking this IP will help reduce exposure to future spam or phishing emails originating from this address. |
+| **Report the email to Spam/Phishing Databases.** | Reporting ensures that this email and its associated indicators become publicly recognizable. This helps reduce the effectiveness of phishing mail. |
+| **Flag emails from the domain `virgilio.it`.** | Flagging emails from this domain could help mitigate similar threats. |
+| **User awareness and training.** | Inform and educate users on how to identify phishing emails. |
+| **Continuous Monitoring & Threat Intelligence Integration.** | Integrate threat intelligence platforms like the tools used in this investigation (e.g., Cisco Talos). |
+
+## 5. Taking action
+During our investigation, **AbuseIPDB** had 0 file reports for the identified addresses. By registering for reporting privileges, we can register this incident.
+
+![image](https://github.com/user-attachments/assets/2aed25e3-637a-4bd6-807f-dec4877c108b)
+
+In the above image, I have entered details from our investigation and submitted a report.
+
+## 6. Future expansions
 
 
 
